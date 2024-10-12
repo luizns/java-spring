@@ -3,10 +3,7 @@ package com.github.luizns.dscommerce.entities;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 @Getter
@@ -15,10 +12,12 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @Entity
 @Accessors(chain = true) // Permite o encadeamento de setters
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Table(name = "tb_order_item")
 public class OrderItem {
 
     @EmbeddedId
+    @EqualsAndHashCode.Include
     private OrderItemPK id = new OrderItemPK();
 
     private Integer quantity;
