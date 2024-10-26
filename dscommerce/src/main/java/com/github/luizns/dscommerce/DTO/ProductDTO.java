@@ -3,10 +3,7 @@ package com.github.luizns.dscommerce.DTO;
 import com.github.luizns.dscommerce.entities.Product;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import org.springframework.transaction.annotation.Transactional;
 
-@NoArgsConstructor
 @AllArgsConstructor
 @Getter
 public class ProductDTO {
